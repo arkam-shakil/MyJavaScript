@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign-In Page</title>
+	<link rel="stylesheet" href="../css/Css.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../js/SignInJS.js"></script>
+</head>
+
+<body>
+	<main>
+		<button id="darkmode" aria-pressed="false"><span>Dark Mode</span></button>
+
+		<h1>Accessible Tab panel</h1>
+		
+		<div id="tablist" role="tablist" onkeydown="return handleArrowKeys(event);">
+			<span id="tab1" role="tab" aria-selected="true" tabindex="0">Tab 1</span>
+			<span id="tab2" role="tab" tabindex="-1">Tab 2</span>
+			<span id="tab3" role="tab" tabindex="-1">Tab 3</span>
+		</div>
+
+		<div id="panels">
+			<div id="panel1" role="tabpanel" tabindex="0">
+				Love isn’t soft, like those poets say.<br> Love has teeth which bite and the wounds never close.
+			</div>
+
+			<div id="panel2" role="tabpanel" tabindex="-1" style="display: none;">
+				Let me sink for now, <br>I’ll come to the surface soon and let the air clear the water from my lungs, <br>But the water feels so warm down here, and the soft lake bed gently erodes me.
+			</div>
+
+			<div id="panel3" role="tabpanel" tabindex="-1" style="display: none;">
+				they bathe you in gasoline and burn you alive just so they can feel warm, <br>And leave when you’re no more than dead ashes.
+			</div>
+		</div>
+
+		<div id="debug"></div>
+	</main>
+</body>
+</html>
