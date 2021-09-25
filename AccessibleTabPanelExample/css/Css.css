@@ -80,3 +80,13 @@ div span {
 #panel3 {
 	text-align: right;
 }
+
+#liveMessage {
+	background-color: #000080;
+	color: #FFFFFF;
+	text-align: center;
+	width: 60%;
+	hight: auto;
+	padding: 1% 5% 1% 5%;
+	margin: 2% 15% 0% 15%;
+}

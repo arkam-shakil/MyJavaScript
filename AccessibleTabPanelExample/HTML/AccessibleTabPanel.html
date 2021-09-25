@@ -10,8 +10,10 @@
 	<script src="../js/DarkMode.js"></script>
 </head>
 
-<body>
+<body onkeyup="return keyCommandForDarkMode(event);">
 	<main>
+		<div id="liveMessage" role="alert"></div>
+
 		<button id="darkmode" aria-pressed="false"><span>Dark Mode</span></button>
 
 		<h1>Accessible Tab panel</h1>
@@ -36,7 +38,16 @@
 			</div>
 		</div>
 
+
 		<div id="debug"></div>
+
+		<script>
+			document.getElementById("liveMessage").removeAttribute("style");
+			document.getElementById("liveMessage").innerHTML = "Press 'CTRL + 2' to toggal between Dark and Light Modes...";
+			setTimeout(function() {
+			document.getElementById('liveMessage').innerHTML = '';
+			document.getElementById("liveMessage").setAttribute("style", "display: none;");}, 3000);
+		</script>
 	</main>
 </body>
 </html>
