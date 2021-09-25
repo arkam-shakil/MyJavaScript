@@ -76,23 +76,29 @@ function handleArrowKeys(event)
 	}
 }
 
-
-//Code for Dark Mode
+//For Click events
 $(document).ready(function()
 {
-	$("#darkmode").click(function()
+	$("#tab1, #tab2, #tab3").click(function()
 	{
-		let ariaPressedValue = $(this).attr("aria-pressed");
-		
-		if (ariaPressedValue === "false")
+		let tabs = ["tab1", "tab2", "tab3"];
+	let panels = ["panel1", "panel2", "panel3"];
+		let clickedTab = this.id;
+		let dbg = document.getElementById("debug");
+
+		for (let i = 0; i < tabs.length; i++)
 		{
-			$(this).attr("aria-pressed", "true");
-			$("body, main, h1").attr("style", "background-color: black; color: white;");
+		document.getElementById(tabs[i]).setAttribute("tabindex", "-1");
+		document.getElementById(tabs[i]).removeAttribute("aria-selected");
+		document.getElementById(panels[i]).setAttribute("tabindex", "-1");
+		document.getElementById(panels[i]).setAttribute("style", "display: none;");
+
+			if (tabs[i] === clickedTab) {
+			document.getElementById(clickedTab).setAttribute("tabindex", "0");
+			document.getElementById(clickedTab).setAttribute("aria-selected", "true");
+			document.getElementById(panels[i]).setAttribute("tabindex", "0");
+			document.getElementById(panels[i]).removeAttribute("style");
 		}
-		else {
-			$(this).attr("aria-pressed", "false");
-			$("body, main, h1").removeAttr("style");
 		}
 	});
 });
-
