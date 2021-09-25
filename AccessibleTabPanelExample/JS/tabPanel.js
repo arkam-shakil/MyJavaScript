@@ -12,9 +12,11 @@ function handleArrowKeys(event)
 		//Changing Tabs
 			document.getElementById("tab3").setAttribute("tabindex", "0");
 			document.getElementById("tab3").setAttribute("aria-selected", "true");
+			document.getElementById("tab3").setAttribute("style", "background-color: #000020;");
 			document.getElementById("tab3").focus();
 			currentActiveTab.setAttribute("tabindex", "-1");
 			currentActiveTab.removeAttribute("aria-selected");
+			currentActiveTab.setAttribute("style", "background-color: #000080;");
 
 		//Changing the content of Tab Panel
 			document.getElementById(activePanel).setAttribute("tabindex", "-1");
@@ -29,9 +31,11 @@ function handleArrowKeys(event)
 
 			currentActiveTab.setAttribute("tabindex", "-1");
 			currentActiveTab.removeAttribute("aria-selected");
+			currentActiveTab.setAttribute("style", "background-color: #000080;");
 			previousTab.setAttribute("tabindex", "0");
 			previousTab.focus();
 			previousTab.setAttribute("aria-selected", "true");
+			previousTab.setAttribute("style", "background-color: #000020;");
 
 			//Changing The content of panel
 			document.getElementById(activePanel).setAttribute("tabindex", "-1");
@@ -46,10 +50,12 @@ function handleArrowKeys(event)
 		if (currentActiveTab.getAttribute("id") === "tab3")
 		{
 			document.getElementById("tab1").setAttribute("tabindex", "0");
+			document.getElementById("tab1").setAttribute("style", "background-color: #000020;");
 			document.getElementById("tab1").focus();
 			document.getElementById("tab1").setAttribute("aria-selected", "true");
 			currentActiveTab.setAttribute("tabindex", "-1");
 			currentActiveTab.removeAttribute("aria-selected", "-1");
+			currentActiveTab.setAttribute("style", "background-color: #000080;");
 
 		//Changing the content of Tab Panel
 			document.getElementById(activePanel).setAttribute("tabindex", "-1");
@@ -64,8 +70,10 @@ function handleArrowKeys(event)
 			nextTab.setAttribute("tabindex", "0");
 			nextTab.focus();
 			nextTab.setAttribute("aria-selected", "true");
+			nextTab.setAttribute("style", "background-color: #000020;");
 			currentActiveTab.setAttribute("tabindex", "-1");
 			currentActiveTab.removeAttribute("aria-selected");
+			currentActiveTab.setAttribute("style", "background-color: #000080;");
 
 			//Changing The content of panel
 			document.getElementById(activePanel).setAttribute("tabindex", "-1");
@@ -90,12 +98,14 @@ $(document).ready(function()
 		{
 		document.getElementById(tabs[i]).setAttribute("tabindex", "-1");
 		document.getElementById(tabs[i]).removeAttribute("aria-selected");
+		document.getElementById(tabs[i]).setAttribute("style", "background-color: #000080;");
 		document.getElementById(panels[i]).setAttribute("tabindex", "-1");
 		document.getElementById(panels[i]).setAttribute("style", "display: none;");
 
 			if (tabs[i] === clickedTab) {
 			document.getElementById(clickedTab).setAttribute("tabindex", "0");
 			document.getElementById(clickedTab).setAttribute("aria-selected", "true");
+			document.getElementById(clickedTab).setAttribute("style", "background-color: #000020;");
 			document.getElementById(panels[i]).setAttribute("tabindex", "0");
 			document.getElementById(panels[i]).removeAttribute("style");
 		}

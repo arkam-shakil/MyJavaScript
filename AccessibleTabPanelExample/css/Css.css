@@ -52,6 +52,10 @@ div span {
 	margin: 2%;
 }
 
+#tab1 {
+	background-color: #000020;
+}
+
 #panels {
 	width: 90%;
 	hight: auto;
