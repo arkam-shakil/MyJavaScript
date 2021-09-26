@@ -1,0 +1,9 @@
+.disappeared {
+    display: none;
+}
+.appeared {
+    display: block;
+}
+.nice-border {
+    border: 3px solid green;
+}

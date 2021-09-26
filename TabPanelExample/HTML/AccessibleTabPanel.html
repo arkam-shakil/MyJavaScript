@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accessible Tab panel</title>
+	<link rel="stylesheet" href="../css/Css.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../js/tabPanel.js"></script>
+	<script src="../js/DarkMode.js"></script>
+</head>
+
+<body onkeyup="return keyCommandForDarkMode(event);">
+	<main>
+		<div id="liveMessage" role="alert"></div>
+
+		<button id="darkmode" aria-pressed="false"><span>Dark Mode</span></button>
+
+		<h1>Accessible Tab panel</h1>
+		
+		<div id="tablist" role="tablist" onkeydown="return handleArrowKeys(event);">
+			<span id="tab1" role="tab" aria-selected="true" tabindex="0">Quote 1</span>
+			<span id="tab2" role="tab" tabindex="-1">Poem</span>
+			<span id="tab3" role="tab" tabindex="-1">Quote 2</span>
+		</div>
+
+		<div id="panels">
+			<div id="panel1" role="tabpanel" tabindex="0">
+				Love isn’t soft, like those poets say.<br> Love has teeth which bite and the wounds never close.
+			</div>
+
+			<div id="panel2" role="tabpanel" tabindex="-1" style="display: none;">
+				Another day<br>Another life<br>Another chance to call you mine, yeah<br>It's not complicated<br>Another fight<br>Another brawl<br>Another mistake to get ignored<br>It's not complicated<br>Didn't you promise that you will be always there<br>With me.<br>So hold on<br>I beg you please<br>And stay here<br>Cause you are all what I need<br>So baby please<br>Don't go away<br>And stay here, with me<br><br>Ooh how I miss you<br>My symphony played the song that carried you out<br>Ooh how I miss you<br>And I, I miss you and I wish you'd stay<br><br>-Arkam Shakil
+			</div>
+
+			<div id="panel3" role="tabpanel" tabindex="-1" style="display: none;">
+				Let me sink for now, <br>I’ll come to the surface soon and let the air clear the water from my lungs, <br>But the water feels so warm down here, and the soft lake bed gently erodes me.
+			</div>
+		</div>
+
+
+		<div id="debug"></div>
+
+		<script>
+			document.getElementById("liveMessage").removeAttribute("style");
+			document.getElementById("liveMessage").innerHTML = "Press 'CTRL + 2' to toggal between Dark and Light Modes...";
+			setTimeout(function() {
+			document.getElementById('liveMessage').innerHTML = '';
+			document.getElementById("liveMessage").setAttribute("style", "display: none;");}, 3000);
+		</script>
+	</main>
+</body>
+</html>
