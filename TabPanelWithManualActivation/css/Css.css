@@ -1,0 +1,89 @@
+body {
+	background-color: #d0e1f9;
+	font-size: 120%;
+}
+
+main {
+	background-color: #FFFFFF;
+	border: 7px double #0F0FFF;
+	width: 50%;
+	hight: auto;
+	margin: 10% 25% 10% 25%;
+}
+
+h1 {
+	color: #000080;
+	font-size: 250%;
+	margin: 5% 5% 5% 15%;
+}
+
+#darkmode {
+	display: inline-block;
+	color: #FFFFFF;
+	background-color: #000080;
+	width: 10%;
+	hight: auto;
+	margin: 5% 0% 0% 80%;
+}
+
+#darkmode span {
+	display: block;
+	margin: 1%;
+}
+
+#tablist {
+	display: block;
+	background-color: #d0e1f9;
+	color: #000080;
+	width: 90%;
+	hight: auto;
+	margin: 0% 5% 2% 5%;
+}
+
+div span {
+	display: inline-block;
+	background-color: #000080;
+	color: #FFFFFF;
+	text-align: center;
+	border: 2px solid #000080;
+	width: 23%;
+	hight: auto;
+	padding: 1% 2%;
+	margin: 2%;
+}
+
+#panels {
+	width: 90%;
+	hight: auto;
+	margin: 1% 5% 5% 5%;
+}
+
+#panels div {
+	background-color: #000080;
+	color: #FFFFFF;
+	border: 10px solid #d0e1f9;
+	border-radius: 5%;
+	padding: 3% 5% 5% 3%;;
+}
+
+#panel1 {
+	text-align: left;
+}
+
+#panel2 {
+	text-align: center;
+}
+
+#panel3 {
+	text-align: right;
+}
+
+#liveMessage {
+	background-color: #000080;
+	color: #FFFFFF;
+	text-align: center;
+	width: 60%;
+	hight: auto;
+	padding: 1% 5% 1% 5%;
+	margin: 2% 15% 0% 15%;
+}
