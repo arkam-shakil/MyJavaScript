@@ -13,9 +13,14 @@ function handleArrowKeys(event)
 
 	if (keyPressedByUser === "Enter")
 {
-			currentTab.setAttribute("tabindex", "-1");
-			currentTab.removeAttribute("aria-selected");
-			currentTab.removeAttribute("style");
+			t = ["tab1", "tab2", "tab3"];
+			for (let i=0; i<t.length; i++)
+			{
+				let x = document.getElementById(t[i]);
+				x.setAttribute("tabindex", "-1");
+				x.removeAttribute("aria-selected");
+				x.removeAttribute("style");
+			}
 
 			document.getElementById(tab).setAttribute("tabindex", "0");
 			document.getElementById(tab).focus();
